@@ -35,50 +35,47 @@ kyu@Kyu AAA %ls .git/objects/dd
 
 
 
-kyu@Kyu myfirst_git %git checkout main
-   this does not work.....
-
-kyu@Kyu myfirst_git %git status
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-	deleted:    7glist.cvs
-	deleted:    b
-	deleted:    b_phone2.awk
-	deleted:    script.sh
-
-kyu@Kyu myfirst_git %git restore .
-kyu@Kyu myfirst_git %ls
-7glist.cvs	b		b_phone2.awk	script.sh
-
-kyu@Kyu myfirst_git %git config -l
-credential.helper=osxkeychain
-filter.lfs.clean=git-lfs clean -- %f
-filter.lfs.smudge=git-lfs smudge -- %f
-filter.lfs.process=git-lfs filter-process
-filter.lfs.required=true
-user.email=nlee1025@gmail.com
-user.name=nlee1025
-credential.helper=cache --timeout=600
-core.repositoryformatversion=0
-core.filemode=true
-core.bare=false
-core.logallrefupdates=true
-core.ignorecase=true
-core.precomposeunicode=true
-remote.origin.url=https://github.com/nlee1025/Awk.git
-remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
-branch.main.remote=origin
-branch.main.merge=refs/heads/main
 
 kyu@Kyu myfirst_git %git config user.email nlee1025.githubber@gmail.com
 kyu@Kyu myfirst_git %git config user.name nlee1025git
 
-7glist.cvs	b		b_phone2.awk	script.sh
-kyu@Kyu myfirst_git %mv ../tutorial.txt .
-kyu@Kyu myfirst_git %ls
-7glist.cvs	b		b_phone2.awk	script.sh	tutorial.txt
+we changed tutorial.txt** local is committed so repository has latest change
+>>>>>>   git pull -v
+POST git-upload-pack (171 bytes)
+From https://github.com/nlee1025/Awk
+ = [up to date]      main       -> origin/main
+
+
+This is comparing with remote(origin) to local and find out need update on
+origin *
+>>>>>>   git branch -vv
+* main 461fdd1 [origin/main: ahead 1] my first git tutorial
+
+
+kyu@Kyu myfirst_git %git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+ >>>>>>    (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+
+
+
+kyu@Kyu myfirst_git %git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.37 KiB | 1.37 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/nlee1025/Awk.git
+>>>>>>>>>>>   2d9c1fd..461fdd1  main -> main
+kyu@Kyu myfirst_git %glog
+ >>>>>>>>>>>   2 commit 461fdd12f64656857b19fbbc99c2f956e7d4266d (HEAD -> main, origin/main)
+Author: nlee1025git <nlee1025.githubber@gmail.com>
+Date:   Sat Feb 5 10:35:29 2022 -0500
+
+    my first git tutorial
 
