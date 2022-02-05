@@ -1,0 +1,84 @@
+kyu@Kyu AAA %which gf
+gf: aliased to git cat-file -p 
+
+kyu@Kyu AAA %gf 2d9c1f
+tree ea41ebc51b1f4c130639c37f40c914428ce17291
+parent 13a928b06b06f6837646fd4808bf240f8c20490f
+author nlee1025 <nlee1025@gmail.com> 1643577916 -0500
+committer nlee1025 <nlee1025@gmail.com> 1643577916 -0500
+
+first b
+kyu@Kyu AAA %gf ea41ebc
+100644 blob dd6c465958b8126515ea95297bc8c28362776447	7glist.cvs
+100644 blob dd6c465958b8126515ea95297bc8c28362776447	b
+100644 blob 333f2170c3b984dd8bb5591fdb084136f396c80e	b_phone2.awk
+100644 blob 73bed9811d5754c9d55c019847a4b6f03fafb938	script.sh
+kyu@Kyu AAA %gf dd6c4        
+Madison_Kim	M	Danny_Jung	dannyjung@gmail.com	5713951918	Suzy_Jung	suzyjung@gmail.com	5713951000
+Madison1_Kim	M	Danny1_Jung	dannyjung_@gmail.com	5713951951	Suzy12_Jung	suzyjung2_@gmail.com	5713951051
+Madison2_Kim	M	Danny2_Jung	danny2_jung@gmail.com	5713951952	Suzy3_Jung	suzy3_jung@gmail.com	5713951052
+Madison3_Kim	M	Danny3_Jung	danny3_jung@gmail.com	5713951953	Suzy_Jung	suzy_jung@gmail.com	5713951053
+kyu@Kyu AAA %ls
+7glist.cvs		demo			old
+7glist2.cvs		diskspace.sh		practice_phone
+average.awk		exchange		practice_phone_code
+awk			exchange.txt		script.sh
+b			kid_directory		snapshot
+b_phone.awk		mkmylocatedb		what
+b_phone2.awk		newfile
+buckaroo		note
+kyu@Kyu AAA %ls .git/objects/dd                                        
+6c465958b8126515ea95297bc8c28362776447
+kyu@Kyu AAA %ls .git/objects/dd
+6c465958b8126515ea95297bc8c28362776447
+kyu@Kyu AAA %ls .git/objects/dd
+
+
+
+kyu@Kyu myfirst_git %git checkout main
+   this does not work.....
+
+kyu@Kyu myfirst_git %git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    7glist.cvs
+	deleted:    b
+	deleted:    b_phone2.awk
+	deleted:    script.sh
+
+kyu@Kyu myfirst_git %git restore .
+kyu@Kyu myfirst_git %ls
+7glist.cvs	b		b_phone2.awk	script.sh
+
+kyu@Kyu myfirst_git %git config -l
+credential.helper=osxkeychain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+user.email=nlee1025@gmail.com
+user.name=nlee1025
+credential.helper=cache --timeout=600
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+remote.origin.url=https://github.com/nlee1025/Awk.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+
+kyu@Kyu myfirst_git %git config user.email nlee1025.githubber@gmail.com
+kyu@Kyu myfirst_git %git config user.name nlee1025git
+
+7glist.cvs	b		b_phone2.awk	script.sh
+kyu@Kyu myfirst_git %mv ../tutorial.txt .
+kyu@Kyu myfirst_git %ls
+7glist.cvs	b		b_phone2.awk	script.sh	tutorial.txt
+
