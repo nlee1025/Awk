@@ -89,6 +89,15 @@ git commit -am "successfully push to web tutorial.txt"
 git branch -vv
 git push
 
-==================================how to add new edit to web
+==================================how to create branch and download branch
+
+git pull
+git branch -vv
+* feature-parentfile 3a9774e [origin/feature-parentfile] Create feature "parent branch" parent.txt
+  main               20d499b [origin/main] shortcut.txt added
+git checkout feature-parentfile
+ls feature-parent 
+parent.txt
 
 
+==================================how to create branch and download branch

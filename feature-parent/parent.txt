@@ -1,1 +1,4 @@
 hello it is in feature parent directory and file name is parent.txt.
+==================================how to add new edit to web
+==================================how to add new edit to web
+locally I have edited in feature-pareant branch of parent.txt
