@@ -1,0 +1,35 @@
+#!/bin/zsh
+
+# Add commonly used folders to $PATH
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
+# Specify default editor. Possible values: vim, nano, ed etc.
+export EDITOR=vim
+
+# File search functions
+function f() { find . -iname "*$1*" ${@:2} }
+function r() { grep "$1" ${@:2} -R . }
+
+# Create a folder and move into it in one command
+function mkcd() { mkdir -p "$@" && cd "$_"; }
+
+# Example aliases
+alias cppcompile='c++ -std=c++11 -stdlib=libc++'
+alias g='git'
+
+alias glog="git log "
+alias gstat="git status "
+alias gf="git cat-file -p "
+alias gls="git ls-files "
+alias b="cd ..; ls"
+alias bb="cd ../..; ls"
+alias bbb="cd ../../..; ls"
+alias bbbb="cd ../../../..; ls"
+alias bbbbb="cd ../../../../..; ls"
+alias m="cd -;  ls"
+alias l="ls -al"
+alias lp="ls -p"
+alias h=history
+
+# configure my multi-line prompt
+PS1='%n@%m %1~ %#'
