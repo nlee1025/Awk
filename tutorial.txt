@@ -78,4 +78,17 @@ Author: nlee1025git <nlee1025.githubber@gmail.com>
 Date:   Sat Feb 5 10:35:29 2022 -0500
 
     my first git tutorial
+==================================how to add new edit to web
+
+
+git add tutorial.txt 
+git commit -m "successfully push to web tutorial.txt"
+
+
+git commit -am "successfully push to web tutorial.txt"
+git branch -vv
+git push
+
+==================================how to add new edit to web
+
 
